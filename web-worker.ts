@@ -28,7 +28,7 @@ export class WebWorkerService implements IWebWorkerService {
     }
 
     getWorker(promise: Promise<any>): Worker {
-        return this.promiseToWorkerMap.get(promise);
+        return this.promiseToWorkerMap.get(promise)!;
     }
     
     private createPromiseForWorker<T>(worker: Worker, data: any) {
@@ -45,7 +45,7 @@ export class WebWorkerService implements IWebWorkerService {
             this.workerFunctionToUrlMap.set(fn, url);
             return url;
         }
-        return this.workerFunctionToUrlMap.get(fn);
+        return this.workerFunctionToUrlMap.get(fn)!;
     }
 
     private createWorkerUrl(resolve: Function): string {
