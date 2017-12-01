@@ -11,6 +11,7 @@
     "worker"
   ],
   "main": "dist/web-worker.service.js",
+  "typings": "dist/web-worker.service.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/haochi/angular2-web-worker"
